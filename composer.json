@@ -1,0 +1,14 @@
+{
+  "name": "vendor_name/dto1",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "d",
+  "authors": [
+    {
+      "name": "dang",
+      "email": "dang@gmail.com"
+    }
+  ],
+  "require": {
+  }
+}
