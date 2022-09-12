@@ -9,6 +9,12 @@
       "email": "dang@gmail.com"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "interface\\": "interface/",
+      "src\\": "src/"
+    }
+  },
   "require": {
   }
 }

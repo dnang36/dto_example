@@ -57,6 +57,7 @@ class Collection implements CollectionInterface{
     public function clear()
     {
         // TODO: Implement clear() method.
+        $this->element=[];
     }
 
     public function add($element)
@@ -69,11 +70,13 @@ class Collection implements CollectionInterface{
     public function first()
     {
         // TODO: Implement first() method.
+        return reset($this->element);
     }
 
     public function last()
     {
         // TODO: Implement last() method.
+        return end($this->element);
     }
 
     public function map($callback)
@@ -84,6 +87,7 @@ class Collection implements CollectionInterface{
     public function count()
     {
         // TODO: Implement count() method.
+        return count($this->element);
     }
 
     public function getIterator()

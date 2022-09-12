@@ -10,7 +10,7 @@ interface CollectionInterface extends Countable, IteratorAggregate, ArrayAccess,
 
     public function isEmty();
 
-    public function filter($callback);
+    public function filter(\Closure $callback);
 
     public function clear();
 
@@ -20,6 +20,6 @@ interface CollectionInterface extends Countable, IteratorAggregate, ArrayAccess,
 
     public function last();
 
-    public function map($callback);
+    public function map(\Closure $callback);
 
 }
