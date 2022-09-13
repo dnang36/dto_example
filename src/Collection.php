@@ -17,6 +17,11 @@ class Collection implements CollectionInterface{
         return self::class . '@' . spl_object_hash($this);
     }
 
+    protected function createFrom(array $elements)
+    {
+        return new static($elements);
+    }
+
 
     public function offsetUnset($offset)
     {
@@ -51,7 +56,7 @@ class Collection implements CollectionInterface{
 
     public function filter($callback)
     {
-        // TODO: Implement filter() method.
+        return $this->createFrom(array_filter($this->elements, $callback, ARRAY_FILTER_USE_BOTH));
     }
 
     public function clear()

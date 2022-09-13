@@ -1,7 +1,9 @@
 <?php
 
 namespace src;
-
+use Carbon\Carbon;
+use DateTimeInterface;
+use interface\Arrayable;
 
 
 trait HasAttributes
