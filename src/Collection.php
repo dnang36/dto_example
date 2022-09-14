@@ -92,6 +92,7 @@ class Collection implements CollectionInterface{
     public function map($callback)
     {
         // TODO: Implement map() method.
+        return $this->createFrom(array_map($callback, $this->elements));
     }
 
     public function count()
