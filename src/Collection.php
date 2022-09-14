@@ -26,26 +26,31 @@ class Collection implements CollectionInterface{
     public function offsetUnset($offset)
     {
         // TODO: Implement offsetUnset() method.
+        return isset($this->element[$offset]);
     }
 
     public function offsetGet($offset)
     {
         // TODO: Implement offsetGet() method.
+        return $this->element[$offset];
     }
 
     public function offsetExists($offset)
     {
         // TODO: Implement offsetExists() method.
+        return isset($this->element[$offset]);
     }
 
     public function offsetSet($offset, $value)
     {
         // TODO: Implement offsetSet() method.
+        $this->element[$offset]=$value;
     }
 
     public function toArray()
     {
         // TODO: Implement toArray() method.
+        return $this->attributesToArray();
     }
 
     public function isEmty()
@@ -98,5 +103,6 @@ class Collection implements CollectionInterface{
     public function getIterator()
     {
         // TODO: Implement getIterator() method.
+        return new \ArrayIterator($this);
     }
 }
